@@ -69,29 +69,13 @@
       margin: 20px auto;
       letter-spacing: -0.018em;
     }
-    .signature {
-      max-width: 710px;
-      margin: 36px auto 0;
-      color: #62696b;
-      font-size: clamp(15px, 1.6vw, 19px);
-      line-height: 1.55;
-      font-weight: 400;
-    }
-    .signature::before {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 2px;
-      background: var(--teal);
-      margin: 0 auto 16px;
-    }
     .stones {
       margin: clamp(52px, 6vw, 78px) auto 0;
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: clamp(54px, 6vw, 96px);
       align-items: start;
-      padding-bottom: 130px;
+      padding-bottom: 28px;
     }
     .stone h2 {
       color: var(--teal);
@@ -99,14 +83,7 @@
       font-weight: 400;
       letter-spacing: -0.018em;
       line-height: 1.25;
-      margin: 0 0 9px;
-    }
-    .subtitle {
-      color: var(--muted);
-      font-size: 17px;
-      line-height: 1.5;
-      margin: 0 0 34px;
-      font-weight: 400;
+      margin: 0 0 28px;
     }
     .stone p {
       margin: 0 0 25px;
@@ -117,24 +94,63 @@
     .stone p strong {
       font-weight: 600;
     }
+    .greeting {
+      max-width: 800px;
+      margin: 28px auto 0;
+      text-align: center;
+    }
+    .greeting p {
+      font-size: clamp(16px, 1.7vw, 19px);
+      font-weight: 400;
+      line-height: 1.7;
+      margin: 0 auto 20px;
+    }
+    .stone-subtitle {
+      display: block;
+      margin-top: 8px;
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0;
+    }
+    .closing {
+      text-align: center;
+      max-width: 700px;
+      margin: 10px auto 0;
+      padding: 30px 0 80px;
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height: 1.65;
+      color: #62696b;
+    }
+    .closing::before {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: var(--teal);
+      margin: 0 auto 22px;
+    }
     @media (max-width: 740px) {
       .page { width: min(100% - 40px, 540px); }
       .masthead { padding-top: 25px; }
       .logo { width: 176px; }
       .message { margin-top: 35px; }
       h1 { font-size: 25px; }
-      .quote-wrap { margin-top: 24px; }
+      .greeting { margin-top: 22px; }
+      .greeting p { font-size: 16px; line-height: 1.72; margin-bottom: 18px; }
+      .quote-wrap { margin-top: 32px; }
       blockquote { margin: 18px auto; font-size: 22px; line-height: 1.58; }
-      .signature { margin-top: 30px; font-size: 16px; }
       .stones {
         grid-template-columns: 1fr;
         gap: 66px;
         margin-top: 54px;
-        padding-bottom: 90px;
+        padding-bottom: 20px;
       }
       .stone h2 { font-size: 29px; }
+      .stone-subtitle { font-size: 16px; }
+      .closing { padding: 20px 0 65px; }
       .stone p { font-size: 16px; line-height: 1.72; }
-      .subtitle { font-size: 16px; margin-bottom: 28px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -148,36 +164,38 @@
     </header>
 
     <section class="message" aria-label="Messaggio di LILIUM">
-      <h1>Cari amici e clienti di Lilium.</h1>
-
+      <h1>Cari amici e clienti di Lilium,</h1>
+      <div class="greeting">
+        <p>vi auguriamo buone feste!</p>
+        <p>Che questi giorni siano pieni del calore delle persone care, della gioia di ritrovarsi e della sensazione che ciò che conta davvero sia vicino a voi.</p>
+        <p>Ogni giorno il nostro lavoro è dedicato alla cura delle persone. Sappiamo quanto siano importanti l’attenzione, il sostegno e la possibilità di poter contare su qualcuno. Grazie per la vostra fiducia: dà un significato speciale a tutto ciò che facciamo.</p>
+        <p>Questo bracciale è un piccolo dono accompagnato da un augurio sincero: che nella vostra vita ci sia sempre spazio sia per la quiete interiore sia per l’ispirazione ad andare avanti. Che vi ricordi che tutti hanno bisogno di cura, anche voi.</p>
+      </div>
       <div class="quote-wrap">
         <div class="ornament" aria-hidden="true">✦</div>
-        <blockquote>L'angelite dona il silenzio in cui nasce la verità, mentre l'apatite dà il coraggio e l'energia per tradurla in realtà. Che questo duo diventi la vostra bussola personale di armonia e ispirazione</blockquote>
+        <blockquote>L’angelite dona il silenzio in cui nasce la verità, mentre l’apatite offre il coraggio e l’energia per darle vita. Che questo incontro diventi la vostra bussola personale di armonia e ispirazione.</blockquote>
         <div class="ornament" aria-hidden="true">✦</div>
       </div>
-
-      <p class="signature">Lilium - in valore di azione che esprimiamo ogni giorno</p>
     </section>
 
     <section class="stones" aria-label="Significato delle pietre">
       <article class="stone" aria-labelledby="angelite-title">
-        <h2 id="angelite-title">Angelite</h2>
-        <p class="subtitle">Pietra del silenzio e del sostegno superiore</p>
-        <p>L'angelite ricorda un pezzetto di cielo puro, cristallizzato in un minerale. La sua delicata tonalità azzurra rallenta immediatamente la corsa interiore e dona una sensazione di protezione.</p>
-        <p><strong>• Livello fisico (corpo):</strong> Aiuta ad alleviare le tensioni muscolari nella zona del collo e delle spalle causate dallo stress. Favorisce un sonno profondo e tranquillo, regolarizzando delicatamente la respirazione e il ritmo cardiaco prima del riposo.</p>
-        <p><strong>• Livello mentale ed emotivo (anima):</strong> Dissolve l'ansia, i risentimenti e le tensioni interiori. Aiuta ad accettare situazioni difficili senza panico e a esprimere i propri pensieri con calma, dolcezza e amore.</p>
-        <p><strong>• Livello spirituale (energia):</strong> Rafforza il legame con l'intuizione e il Sé superiore, creando una sensazione di sostegno invisibile. Purifica lo spazio intorno a chi la possiede e aiuta ad ascoltare la silenziosa voce interiore in mezzo al rumore delle informazioni.</p>
+        <h2 id="angelite-title">Angelite <span class="stone-subtitle">— Pietra della quiete e del sostegno superiore</span></h2>
+        <p>L’angelite ricorda un frammento di cielo limpido racchiuso in un minerale. La sua delicata tonalità azzurra rallenta all’istante la frenesia interiore e dona una sensazione di protezione.</p>
+        <p><strong>• Livello fisico (corpo):</strong> Aiuta ad alleviare le tensioni muscolari nella zona del collo e delle spalle causate dallo stress. Favorisce un sonno profondo e tranquillo, regolarizzando dolcemente la respirazione e il ritmo cardiaco prima del riposo.</p>
+        <p><strong>• Livello mentale ed emotivo (anima):</strong> Scioglie l’ansia, il risentimento e le tensioni interiori. Aiuta ad accettare le situazioni difficili senza panico e a esprimere i propri pensieri con calma, dolcezza e amore.</p>
+        <p><strong>• Livello spirituale (energia):</strong> Rafforza il legame con l’intuizione e con il Sé superiore, creando una sensazione di sostegno invisibile. Purifica lo spazio intorno a chi la indossa e aiuta ad ascoltare la voce discreta dell’interiorità tra il rumore delle informazioni.</p>
       </article>
 
       <article class="stone" aria-labelledby="apatite-title">
-        <h2 id="apatite-title">Apatite</h2>
-        <p class="subtitle">Pietra dell'ispirazione e degli obiettivi chiari</p>
-        <p>L'apatite attira lo sguardo con la profondità del colore delle onde del mare e il suo scintillio vivo e luminoso. È una pietra del risveglio che trasforma i sogni in un piano d'azione chiaro.</p>
-        <p><strong>• Livello fisico (corpo):</strong> Riempie l'organismo di vitalità e aiuta a recuperare più rapidamente le forze nei momenti di calo di energia. Sostiene un metabolismo sano e aiuta a percepire meglio i veri bisogni del proprio corpo.</p>
-        <p><strong>• Livello mentale ed emotivo (anima):</strong> Elimina l'apatia, la procrastinazione e i dubbi sulle proprie capacità. Stimola il pensiero creativo, aiuta a strutturare le idee caotiche e a trovare facilmente un linguaggio comune con le persone.</p>
-        <p><strong>• Livello spirituale (energia):</strong> Apre un flusso di idee nuove e aiuta a vedere il proprio vero scopo. Amplia i confini della percezione, unendo l'esperienza di vita accumulata all'ispirazione per le realizzazioni future.</p>
+        <h2 id="apatite-title">Apatite <span class="stone-subtitle">— Pietra dell’ispirazione e degli obiettivi chiari</span></h2>
+        <p>L’apatite cattura lo sguardo con la profondità del suo colore verde mare e con una lucentezza vivace e scintillante. È una pietra del risveglio, che trasforma i sogni in un piano d’azione concreto.</p>
+        <p><strong>• Livello fisico (corpo):</strong> Dona vitalità all’organismo e aiuta a recuperare più rapidamente le forze nei momenti di calo energetico. Favorisce un metabolismo sano e aiuta a percepire meglio i reali bisogni del proprio corpo.</p>
+        <p><strong>• Livello mentale ed emotivo (anima):</strong> Allontana l’apatia, la procrastinazione e i dubbi sulle proprie capacità. Stimola il pensiero creativo, aiuta a dare ordine alle idee confuse e a entrare facilmente in sintonia con gli altri.</p>
+        <p><strong>• Livello spirituale (energia):</strong> Apre il flusso di nuove idee e aiuta a riconoscere la propria autentica vocazione. Amplia gli orizzonti della percezione, unendo l’esperienza di vita accumulata all’ispirazione per le realizzazioni future.</p>
       </article>
     </section>
+    <footer class="closing">Lilium — il valore dei gesti che compiamo ogni giorno.</footer>
   </main>
 </body>
 </html>
