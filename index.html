@@ -46,7 +46,8 @@
     }
     .message {
       max-width: 870px;
-      margin: 36px auto 0;
+      margin: 0 auto;
+      padding-top: clamp(42px, 6vw, 78px);
       text-align: center;
     }
     h1 {
@@ -76,6 +77,15 @@
       line-height: 1.16;
       text-align: center;
       margin-bottom: 24px;
+    }
+    .gift-visual {
+      width: min(100%, 450px);
+      margin: 28px auto 30px;
+    }
+    .gift-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .quote-wrap { margin-top: 35px; }
     .ornament {
@@ -131,30 +141,39 @@
     }
     .stone p strong { font-weight: 600; }
     .closing {
-      text-align: center;
       max-width: 700px;
-      margin: 10px auto 0;
-      padding: 30px 0 74px;
+      margin: 50px auto 0;
+      padding: 20px 0 78px;
+      text-align: center;
+    }
+    .footer-logo {
+      display: block;
+      width: 155px;
+      max-width: 48%;
+      height: auto;
+      margin: 0 auto 22px;
+    }
+    .closing-phrase {
       font-family: var(--display);
       font-size: clamp(22px, 2.4vw, 29px);
       line-height: 1.3;
       color: #575f60;
       font-style: italic;
       font-weight: 400;
+      margin: 0 auto 16px;
     }
-    .closing::before {
-      content: "";
-      display: block;
-      width: 48px;
-      height: 2px;
-      background: var(--teal);
-      margin: 0 auto 22px;
+    .team-signature {
+      margin: 0;
+      font-family: var(--body);
+      font-size: 15px;
+      line-height: 1.5;
+      color: #596365;
     }
     @media (max-width: 740px) {
       .page { width: min(100% - 40px, 540px); }
       .masthead { padding-top: 25px; }
       .logo { width: 176px; }
-      .message { margin-top: 31px; }
+      .message { margin-top: 0; padding-top: 50px; }
       h1 { font-size: 30px; }
       .greeting { margin-top: 14px; }
       .greeting p { font-size: 15.5px; line-height: 1.66; margin-bottom: 18px; }
@@ -170,7 +189,11 @@
       .stone h2 { font-size: 36px; margin-bottom: 21px; }
       .stone-subtitle { font-size: 15px; margin-top: 8px; }
       .stone p { font-size: 15.5px; line-height: 1.65; margin-bottom: 19px; }
-      .closing { font-size: 24px; padding: 20px 0 65px; }
+      .gift-visual { margin: 22px auto 26px; }
+      .closing { margin-top: 32px; padding: 10px 0 65px; }
+      .footer-logo { width: 140px; margin-bottom: 18px; }
+      .closing-phrase { font-size: 24px; }
+      .team-signature { font-size: 15px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -179,16 +202,15 @@
 </head>
 <body>
   <main class="page">
-    <header class="masthead">
-      <img class="logo" src="./lilium-logo.svg" alt="LILIUM" width="956" height="892">
-    </header>
-
     <section class="message" aria-label="Messaggio di LILIUM">
       <h1>Cari amici e clienti di Lilium,</h1>
       <div class="greeting">
         <p>vi auguriamo buone feste!</p>
         <p>Che questi giorni siano pieni del calore delle persone care, della gioia di ritrovarsi e della sensazione che ciò che conta davvero sia vicino a voi.</p>
         <p>Ogni giorno il nostro lavoro è dedicato alla cura delle persone. Sappiamo quanto siano importanti l’attenzione, il sostegno e la possibilità di poter contare su qualcuno. Grazie per la vostra fiducia: dà un significato speciale a tutto ciò che facciamo.</p>
+        <figure class="gift-visual">
+          <img src="./lilium-natale-card.avif" width="420" height="420" alt="Bracciale LILIUM con auguri Buone Feste" loading="lazy" decoding="async">
+        </figure>
         <p>Questo bracciale è un piccolo dono accompagnato da un augurio sincero: che nella vostra vita ci sia sempre spazio sia per la quiete interiore sia per l’ispirazione ad andare avanti. Che vi ricordi che tutti hanno bisogno di cura, anche voi.</p>
       </div>
       <div class="quote-wrap">
@@ -215,7 +237,11 @@
         <p><strong>• Livello spirituale (energia):</strong> Apre il flusso di nuove idee e aiuta a riconoscere la propria autentica vocazione. Amplia gli orizzonti della percezione, unendo l’esperienza di vita accumulata all’ispirazione per le realizzazioni future.</p>
       </article>
     </section>
-    <footer class="closing">Lilium — il valore dei gesti che compiamo ogni giorno.</footer>
+    <footer class="closing">
+      <img class="footer-logo" src="./lilium-logo.svg" alt="LILIUM" width="956" height="892" loading="lazy">
+      <p class="closing-phrase">Lilium — il valore dei gesti che compiamo ogni giorno.</p>
+      <p class="team-signature">Il team Lilium</p>
+    </footer>
   </main>
 </body>
 </html>
