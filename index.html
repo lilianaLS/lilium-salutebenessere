@@ -78,15 +78,6 @@
       text-align: center;
       margin-bottom: 24px;
     }
-    .gift-visual {
-      width: min(100%, 450px);
-      margin: 28px auto 30px;
-    }
-    .gift-visual img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
     .quote-wrap { margin-top: 35px; }
     .ornament {
       color: #8c9595;
@@ -112,6 +103,14 @@
       gap: clamp(54px, 6vw, 96px);
       align-items: start;
       padding-bottom: 28px;
+    }
+    .stone-image {
+      display: block;
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+      margin: 0 auto 28px;
+      object-fit: contain;
     }
     .stone h2 {
       color: var(--teal);
@@ -189,7 +188,6 @@
       .stone h2 { font-size: 36px; margin-bottom: 21px; }
       .stone-subtitle { font-size: 15px; margin-top: 8px; }
       .stone p { font-size: 15.5px; line-height: 1.65; margin-bottom: 19px; }
-      .gift-visual { margin: 22px auto 26px; }
       .closing { margin-top: 32px; padding: 10px 0 65px; }
       .footer-logo { width: 140px; margin-bottom: 18px; }
       .closing-phrase { font-size: 24px; }
@@ -208,9 +206,6 @@
         <p>vi auguriamo buone feste!</p>
         <p>Che questi giorni siano pieni del calore delle persone care, della gioia di ritrovarsi e della sensazione che ciò che conta davvero sia vicino a voi.</p>
         <p>Ogni giorno il nostro lavoro è dedicato alla cura delle persone. Sappiamo quanto siano importanti l’attenzione, il sostegno e la possibilità di poter contare su qualcuno. Grazie per la vostra fiducia: dà un significato speciale a tutto ciò che facciamo.</p>
-        <figure class="gift-visual">
-          <img src="./lilium-natale-card.avif" width="420" height="420" alt="Bracciale LILIUM con auguri Buone Feste" loading="lazy" decoding="async">
-        </figure>
         <p>Questo bracciale è un piccolo dono accompagnato da un augurio sincero: che nella vostra vita ci sia sempre spazio sia per la quiete interiore sia per l’ispirazione ad andare avanti. Che vi ricordi che tutti hanno bisogno di cura, anche voi.</p>
       </div>
       <div class="quote-wrap">
@@ -222,6 +217,7 @@
 
     <section class="stones" aria-label="Significato delle pietre">
       <article class="stone" aria-labelledby="angelite-title">
+        <img class="stone-image" src="./angelite-original.jpeg" width="1122" height="1402" alt="Angelite: quiete, armonia, intuizione e sostegno" loading="lazy" decoding="async">
         <h2 id="angelite-title">Angelite <span class="stone-subtitle">— Pietra della quiete e del sostegno superiore</span></h2>
         <p>L’angelite ricorda un frammento di cielo limpido racchiuso in un minerale. La sua delicata tonalità azzurra rallenta all’istante la frenesia interiore e dona una sensazione di protezione.</p>
         <p><strong>• Livello fisico (corpo):</strong> Aiuta ad alleviare le tensioni muscolari nella zona del collo e delle spalle causate dallo stress. Favorisce un sonno profondo e tranquillo, regolarizzando dolcemente la respirazione e il ritmo cardiaco prima del riposo.</p>
@@ -230,6 +226,7 @@
       </article>
 
       <article class="stone" aria-labelledby="apatite-title">
+        <img class="stone-image" src="./apatite-original.jpeg" width="1122" height="1402" alt="Apatite: ispirazione, energia, chiarezza e determinazione" loading="lazy" decoding="async">
         <h2 id="apatite-title">Apatite <span class="stone-subtitle">— Pietra dell’ispirazione e degli obiettivi chiari</span></h2>
         <p>L’apatite cattura lo sguardo con la profondità del suo colore verde mare e con una lucentezza vivace e scintillante. È una pietra del risveglio, che trasforma i sogni in un piano d’azione concreto.</p>
         <p><strong>• Livello fisico (corpo):</strong> Dona vitalità all’organismo e aiuta a recuperare più rapidamente le forze nei momenti di calo energetico. Favorisce un metabolismo sano e aiuta a percepire meglio i reali bisogni del proprio corpo.</p>
